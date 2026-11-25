@@ -21,6 +21,12 @@ pnpm build
 pnpm start
 ```
 
+## Triển khai trên Vercel
+
+Import thư mục gốc của repo này làm project Next.js. Trong **Settings → Build and Deployment → Build and Development Settings**, chọn **Framework Preset: Next.js** và tắt **Override** cho **Output Directory** (không đặt `dist`). Để **Build Command** ở mặc định; Vercel sẽ dùng script `build` trong `package.json`. `vercel.json` cũng ghim preset Next.js và đặt Output Directory về mặc định cho từng lần deploy.
+
+Sau khi lưu cài đặt, redeploy commit mới. Ứng dụng có API route và SSR nên không dùng chế độ static export.
+
 ## Các trang
 
 | Đường dẫn | Nội dung |
